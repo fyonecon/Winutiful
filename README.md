@@ -1,4 +1,4 @@
-# 简单美化Windows11：让Win的基础功能更符合Mac，让Win无自带阿三式软件，让Win的操作更符合Win。
+# 美化Win11：让Win的功能更靠近Mac，让Win的操作简化。
 
 原始教程地址：https://github.com/fyonecon/winutiful
 
