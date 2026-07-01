@@ -25,8 +25,19 @@
   > 1. 无视硬件Win11的TPM2.0的要求在老电脑上安装Win11；
   > 2. 若电脑的Win11不能正常启动，则可以借助此U盘检查和修复电脑的Win11系统。比如可以使用【调出终端、安全模式启动、还原“系统保护”】；
   > 3. 存一些常用软件在这个U盘里面装系统的时候用。
-- Win11 ISO镜像下载（企业版、专业版，25H2二六年5月版）：
-  > magnet:?xt=urn:btih:ff7598ae8b2fc49be56ceb20509d9dac26f78855&dn=zh-cn_windows_11_business_editions_version_25h2_updated_may_2026_arm64_dvd_877177b7.iso&xl=8384253952
+- Win11 ISO镜像下载（企业版、专业版、x64）：
+  > 23H2二四年9月版（同Win10老内核，非常稳定。Win10老UI的最佳替代品。）：
+  >
+  > magnet:?xt=urn:btih:566a91613cfe1c91c8928654ccf6df9f6592c590&dn=zh-cn_windows_11_business_editions_version_23h2_updated_sep_2024_x64_dvd_22316bf2.iso&xl=7094269952
+  >
+  > 25H2二六年6月版（Rust新内核，Sandbox Bug。UI较新。）：
+  > 
+  > magnet:?xt=urn:btih:d69b6a448f44088bbcde4e2ac7e833fb1dabd48d&dn=zh-cn_windows_11_business_editions_version_25h2_updated_june_2026_x64_dvd_d0e09c94.iso&xl=8672753664
+  >
+  > 26H1二六年6月版（Rust新内核，同有Sandbox Bug。UI较新。）：
+  > 
+  > magnet:?xt=urn:btih:38991e4880df24fb00645aa5100be440afaaf715&dn=zh-cn_windows_11_business_editions_version_26h1_updated_june_2026_x64_dvd_4759e6b0.iso&xl=8112902144
+
 - Win11 学习激活：
   > https://github.com/zbezj/HEU_KMS_Activator/releases
   > 
