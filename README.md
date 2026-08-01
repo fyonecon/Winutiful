@@ -1,5 +1,7 @@
 # 美化Win11：让Win的功能更靠近Mac，让Win的操作更简化。
 
+本教程适用于Win11 26H1+
+
 原始教程地址：https://github.com/fyonecon/Winutiful
 
 美化Mac：https://github.com/fyonecon/Macutiful
@@ -26,14 +28,6 @@
   > 2. 若电脑的Win11不能正常启动，则可以借助此U盘检查和修复电脑的Win11系统。比如可以使用【调出终端、安全模式启动、还原“系统保护”】；
   > 3. 存一些常用软件在这个U盘里面装系统的时候用。
 - Win11 ISO镜像下载（企业版、专业版、x64）：
-  > 23H2二四年9月版（同Win10老内核，非常稳定。Win10老UI的最佳替代品，2020年以前老机器首选。）：
-  >
-  > magnet:?xt=urn:btih:566a91613cfe1c91c8928654ccf6df9f6592c590&dn=zh-cn_windows_11_business_editions_version_23h2_updated_sep_2024_x64_dvd_22316bf2.iso&xl=7094269952
-  >
-  > 25H2二六年6月版（Rust新内核，Sandbox Bug。UI较新。）：
-  > 
-  > magnet:?xt=urn:btih:d69b6a448f44088bbcde4e2ac7e833fb1dabd48d&dn=zh-cn_windows_11_business_editions_version_25h2_updated_june_2026_x64_dvd_d0e09c94.iso&xl=8672753664
-  >
   > 26H1二六年6月版（Rust新内核，同有Sandbox Bug。UI较新。）：
   > 
   > magnet:?xt=urn:btih:38991e4880df24fb00645aa5100be440afaaf715&dn=zh-cn_windows_11_business_editions_version_26h1_updated_june_2026_x64_dvd_4759e6b0.iso&xl=8112902144
@@ -308,6 +302,45 @@ C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
 ~~~
 C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 ~~~
+
+### 更换Win11系统默认字体：
+
+在注册表打开：
+> 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts
+
+找到位置：
+> MS Gothic & MS UI Gothic & MS PGothic (TrueType)
+
+双击上面位置，将下面值（默认微软雅黑）：
+> msgothic.ttc
+
+改成思源黑体：
+> NotoSansSC-VF.ttf
+
+点击保存，重启电脑。。。
+
+如下都是Win系统自带的（ C:\Windows\Fonts ）：
+
+- 思源黑体：NotoSansSC-VF.ttf
+- 思源宋体：NotoSerifSC-VF.ttf
+- 黑体：simhei.ttf
+- 宋体：simsun.ttc
+- 微软雅黑：msyhl.ttc
+
+### 安装Chrome和扩展插件：
+适用于 Chrome v143+，插件适用于V3扩展，适用于Mac/Win。下面下载地址的软件如果下载不下来，请使用迅雷下载（ 安装迅雷：https://dl.xunlei.com ）。
+
+下载最新Chrome（Mac/Win）：https://www.iplaysoft.com/tools/chrome/
+
+Chrome-151.0.7922.7（Win10+，AMD64）: https://dl.google.com/release2/chrome/acyg5hsdibqz5q3gdzxg6vvvix6a_151.0.7922.72/151.0.7922.72_chrome_installer_uncompressed.exe
+
+Chrome-151.0.7922.7（MacOS14+，ARM64/AMD64）:https://dl.google.com/release2/chrome/jzy33whkrvxpy4bxsfmxnqtcwi_151.0.7922.72/GoogleChrome-151.0.7922.72.dmg
+
+uBlock Origin Lite（屏蔽广告。需开启浏览器扩展开发者模式+解压后导入）：https://github.com/fyonecon/Macutiful/releases/download/Test/Chrome-.V3-Block.Origin.Lite.-.ddkjiahejlhfcafbddmgiahcphecmpfh.zip
+
+AdBlock（屏蔽广告。需开启浏览器扩展开发者模式+解压后导入）：https://github.com/fyonecon/Macutiful/releases/download/Test/Chrome-.V3-AdBlock.-.gighmmpiobklfepjocnamgkkbiglidom.zip
+
+tabPurehome（新标签优化。需开启浏览器扩展开发者模式+解压后导入）：https://github.com/fyonecon/tabPureHome/archive/refs/heads/main.zip
 
 ---
 
