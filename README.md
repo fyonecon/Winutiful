@@ -72,6 +72,8 @@
 - Win11拼音版(600万词-含BetterRime)-v20.3（含教程）：https://github.com/fyonecon/Winutiful/releases/download/Test/Win11.Dict-SuperRime-v20.3.dat.7z
 - “微信多开·一键运行”程序（解压后直接运行，也可以用文编编辑器自行修改）：https://github.com/fyonecon/Winutiful/releases/download/Test/Wechat-More.7z
 
+- 轮播壁纸：https://github.com/fyonecon/Winutiful/releases/download/Test/wallpapers.zip
+
 ---
 
 # 小技能：
