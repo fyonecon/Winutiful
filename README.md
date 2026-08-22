@@ -262,7 +262,7 @@ Firefox的PWA可以做成Safari一样的每个PWA之间相互隔离，而Chrome�
 
 此 Firefox 安装 PWA 教程适同时用于Mac和Win平台。
 
-### 关闭（延长）系统自动更新：
+### 关闭（延长）系统自动更新（此设置可能在26H1+上不可用）：
 a）注册表：
 ~~~
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
@@ -304,6 +304,21 @@ C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
 ~~~
 C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 ~~~
+
+### 将Win的部分快捷键映射成Mac习惯
+安装微软官方出品软件 PowerToys：https://apps.microsoft.com/detail/xp89dcgq3k6vld?hl=zh-CN&gl=CN 
+
+在 PowerToys 中开启键盘快捷键设置：
+
+<img src="./docs/powertoys.png" alt="./docs/powertoys.png"  style="height:400px; max-width:100%;" />
+
+常用映射和禁用冲突快捷键：
+
+<img src="./docs/powertoys-keyboard_manager.png" alt="./docs/powertoys-keyboard_manager.png"  style="height:400px; max-width:100%;" />
+
+或者你可用我的配置备份直接导入即可用（在PowerToys的设置里面导入和导出）：
+
+ > ./docs/powertoys-settings_134318452808687922.ptb
 
 ### 更换Win11系统默认字体：
 
