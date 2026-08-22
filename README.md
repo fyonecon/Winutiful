@@ -305,7 +305,8 @@ C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
 C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 ~~~
 
-### 将Win的部分快捷键映射成Mac习惯
+### 将Win的部分快捷键映射成MacOS快捷键习惯：
+
 安装微软官方出品软件 PowerToys：https://apps.microsoft.com/detail/xp89dcgq3k6vld?hl=zh-CN&gl=CN 
 
 在 PowerToys 中开启键盘快捷键设置：
@@ -313,6 +314,8 @@ C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <img src="./docs/powertoys.png" alt="./docs/powertoys.png"  style="height:400px; max-width:100%;" />
 
 常用映射和禁用冲突快捷键：
+
+这里我将常用的文件文字复制粘贴映射成MacOS的习惯，并禁用干扰操作的快捷键。
 
 <img src="./docs/powertoys-keyboard_manager.png" alt="./docs/powertoys-keyboard_manager.png"  style="height:400px; max-width:100%;" />
 
