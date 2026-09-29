@@ -262,8 +262,8 @@ Firefox的PWA可以做成Safari一样的每个PWA之间相互隔离，而Chrome�
 
 此 Firefox 安装 PWA 教程适同时用于Mac和Win平台。
 
-### 关闭（延长）系统自动更新（此设置可能在26H1+上不可用）：
-a）注册表：
+### 关闭（延长）系统自动更新->注册表时间（此设置可能在25H2及其以前的老Win11才有效）：
+a）注册表（regedit）：
 ~~~
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
 ~~~
@@ -272,12 +272,26 @@ b）右键空白的地方新建 FlightSettingsMaxPauseDays 的 DWORD(32位) 值�
 
 c）双击 FlightSettingsMaxPauseDays，修改值，选十进制，填3560；
 
-d）最后打开电脑设置---系统更新---暂停更新---选取新的“延长周期”，选择你想要的周期，
+d）最后打开电脑设置---系统更新---暂停更新---选取新的“延长周期”，选择你想要的周期。
 
-### 关闭（延长）应用商店自动更新：
+### 关闭（延长）系统自动更新->计划任务（26H1中可以使用）：
+计划任务（Task Scheduler）-微软-Windows-WindowsUpdate-Scheduled Start项右键选择Disable。
+
+<img src="./docs/task-schel-winupdate.png" alt="./docs/task-schel-winupdate.png"  style="height:400px; max-width:100%;" />
+
+### 关闭（延长）系统自动更新->策略组（26H1中可以使用）：
+本地策略组（Local Group Policy）-计算机配置-模板配置-Windows组件 - Windows更新 - 选择禁用win体验更新、禁用预览版更新。
+
+<img src="./docs/local-group-policy-winupdate.png" alt="./docs/local-group-policy-winupdate.png"  style="height:400px; max-width:100%;" />
+
+### 关闭（延长）系统自动更新->服务组件（26H1中可以使用）
+
+不推荐使用。。因为会连带影响（禁止）应用商店下载软件。
+
+### 关闭（延长）应用商店自动更新（此设置可能在25H2及其以前的老Win11才有效）：
 a）先在微软应用商店---设置（商店设置）---应用自动更新，直接关闭（选择默认暂停周期即可）；
 
-b）打开注册表：
+b）打开注册表（regedit）：
 ~~~
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\InstallService\State
 ~~~
