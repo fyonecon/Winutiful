@@ -361,6 +361,10 @@ C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 - 宋体：simsun.ttc
 - 微软雅黑：msyhl.ttc
 
+### JetBrain 换行
+
+> *.md; *.txt; *.rst; *.adoc;*.go;*.php;*.html;*.css;*.js;*.ts;*.tsx;*.toml;*.xml;*.json;*.py;*.vue;*.view;*svelte;
+
 ### 安装Chrome和扩展插件：
 适用于 Chrome v143+，插件适用于V3扩展，适用于Mac/Win。下面下载地址的软件如果下载不下来，请使用迅雷下载（ 安装迅雷：https://dl.xunlei.com ）。
 
