@@ -361,7 +361,7 @@ C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 - 宋体：simsun.ttc
 - 微软雅黑：msyhl.ttc
 
-### JetBrain 换行
+### JetBrain 换行：
 
 > *.md; *.txt; *.rst; *.adoc;*.go;*.php;*.html;*.css;*.js;*.ts;*.tsx;*.toml;*.xml;*.json;*.py;*.vue;*.view;*svelte;
 
