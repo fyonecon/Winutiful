@@ -262,17 +262,43 @@ Firefox的PWA可以做成Safari一样的每个PWA之间相互隔离，而Chrome�
 
 此 Firefox 安装 PWA 教程适同时用于Mac和Win平台。
 
-### 关闭（延长）系统自动更新->注册表时间（此设置可能在25H2及其以前的老Win11才有效）：
-a）注册表（regedit）：
-~~~
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
-~~~
+### 关闭（延长）系统自动更新->注册表时间：
 
-b）右键空白的地方新建 FlightSettingsMaxPauseDays 的 DWORD(32位) 值；
+1️⃣ 任何 Win11 版本“不自动检测”方式设置系统更新：
 
-c）双击 FlightSettingsMaxPauseDays，修改值，选十进制，填3560；
+注册表（regedit）位置：
+> HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
 
-d）最后打开电脑设置---系统更新---暂停更新---选取新的“延长周期”，选择你想要的周期。
+右键新建 `NoAutoUpdate` 项 DWORD32 ，十进制值设为 `1` ;
+右键新建 `AUOptions` 项 DWORD32 ，十进制值设为 `1` ;
+
+2️⃣ 仅针对 26H2/25H2/24H2/23H2 “下拉式日期选择器”：
+
+  a）注册表（regedit）：
+  > HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
+  
+  b）右键空白的地方新建 FlightSettingsMaxPauseDays 的 DWORD(32位) 值；
+  
+  c）双击 FlightSettingsMaxPauseDays，修改值，选十进制，填3560；需要重启系统。
+  
+  d）最后打开电脑设置---系统更新---暂停更新---选取新的“延长周期”，选择你想要的周期。
+
+3️⃣  仅针对26H1类似“方框点选式日期选择器”设置系统更新：
+
+注册表regedit位置：
+> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
+
+| 键名                                  | 类型         | 值                     |
+|---------------------------------------|--------------|------------------------|
+| `PauseUpdatesStartTime`               | 项（REG_SZ） | `2026-10-31T00:00:00Z` |
+| `PauseUpdatesExpiryTime`              | 项（REG_SZ）       | `2046-12-31T00:00:00Z` |
+| `PauseFeatureUpdatesStartTime`        | 项（REG_SZ）       | `2026-10-31T00:00:00Z` |
+| `PauseFeatureUpdatesEndTime`          | 项（REG_SZ）       | `2046-12-31T00:00:00Z` |
+| `PauseQualityUpdatesStartTime`        | 项（REG_SZ）       | `2026-10-31T00:00:00Z` |
+| `PauseQualityUpdatesEndTime`          | 项（REG_SZ）       | `2046-12-31T00:00:00Z` |
+| `FlightSettingsMaxPauseDays` （可选） | DWORD (32位)       | 选十进制，填 `3560`    |
+
+注意，上面键名要全部填写。需要重启系统。重启系统后不需要再设置日期选择器，这与26H2/25H2/24H2/23H2 “下拉式日期选择器”不一样。
 
 ### 关闭（延长）系统自动更新->计划任务（26H1中可以使用）：
 计划任务（Task Scheduler）-微软-Windows-WindowsUpdate-Scheduled Start项右键选择Disable。
@@ -288,7 +314,7 @@ d）最后打开电脑设置---系统更新---暂停更新---选取新的“延�
 
 不推荐使用。。因为会连带影响（禁止）应用商店下载软件。
 
-### 关闭（延长）应用商店自动更新（此设置可能在25H2及其以前的老Win11才有效）：
+### 关闭（延长）应用商店自动更新（此设置26H2/25H2/24H2/23H2才有效）：
 a）先在微软应用商店---设置（商店设置）---应用自动更新，直接关闭（选择默认暂停周期即可）；
 
 b）打开注册表（regedit）：
@@ -360,6 +386,15 @@ C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 - 黑体：simhei.ttf
 - 宋体：simsun.ttc
 - 微软雅黑：msyhl.ttc
+
+### 禁止应用联网：
+FirewallAppBlocker-v1.9便携版，下载 https://www.sordum.org/8125/firewall-app-blocker-fab-v1-9/ 。
+
+原理：
+- 读写Win系统的“Windows 防火墙”程序来实现应用的联网与否，因此在本FirewallAppBlocker软件里面设置完成后可以直接关闭本FirewallAppBlocker软件。
+- 位于底部的“出站规则”、“入站规则”选项就是“Windows 防火墙”程序里面 出、入站规则，完全禁止应用联网需要同时添加 出、入站规则 ，本FirewallAppBlocker软件只是个便携管理的入口。
+- 【xxx.ini】是自动生成的配置文件，新系统里面最好删了，设置好了就不用管。
+
 
 ### JetBrain 换行：
 
