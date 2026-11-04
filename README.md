@@ -231,7 +231,7 @@ start C:\"Program Files"\Tencent\Weixin\Weixin.exe
 
 
 
-### 设置Firefox的PWA功能（适用于Mac和Win）：
+### 设置Firefox的PWA功能（适用于Mac和Win，也可用 Brave浏览器 代替）：
 Firefox的PWA可以做成Safari一样的每个PWA之间相互隔离，而Chrome是互通的。
 
 安装 Firefox 浏览器：https://www.firefox.com/zh-CN/download/all/desktop-release/
