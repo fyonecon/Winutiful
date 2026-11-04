@@ -230,37 +230,62 @@ start C:\"Program Files"\Tencent\Weixin\Weixin.exe
 “微信多开·一键运行”程序（解压后直接运行，也可以用文编编辑器自行修改）：https://github.com/fyonecon/Winutiful/releases/download/Test/Wechat-More.7z
 
 
+### 设置可以媲美Safari的Win平台PWA方案——用Brave浏览器实现：
 
-### 设置Firefox的PWA功能（适用于Mac和Win，也可用 Brave浏览器 代替）：
-Firefox的PWA可以做成Safari一样的每个PWA之间相互隔离，而Chrome是互通的。
+之前用Firefox实现，但是遇到了Firefox与输入法bug，又遇到“firefoxpwa”运行时错误，又很烦firefox天天更新，所以干脆找一款隐私极强的浏览器——Brave。
 
-安装 Firefox 浏览器：https://www.firefox.com/zh-CN/download/all/desktop-release/
+安装：
+> winget install Brave.Brave
 
-给 Firefox 浏览器安装 uBlock 广告插件（离线.xpi文件）：https://github.com/gorhill/uBlock/releases
+或在微软应用商店安装。
 
-安装 firefoxpwa 第三方PWA插件：https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/
+[//]: # (### 设置Firefox的PWA功能（适用于Mac和Win，也可用 Brave浏览器 代替）：)
 
-安装过程中一定要看运行日志，比如还需要手动“开启firefoxpwa插件”，如下可能需要在终端运行如下命令才能开启firefoxpwa插件：
-> sudo mkdir -p "/Library/Application Support/Mozilla/NativeMessagingHosts"
->
-> sudo ln -sf "/usr/local/opt/firefoxpwa/share/firefoxpwa.json" "/Library/Application Support/Mozilla/NativeMessagingHosts/firefoxpwa.json"
+[//]: # (Firefox的PWA可以做成Safari一样的每个PWA之间相互隔离，而Chrome是互通的。)
 
-手动安装PWA运行时，比如可能“firefoxpwa插件运行时”下载太慢，就自己在终端手动下载：
-> firefoxpwa runtime install
+[//]: # ()
+[//]: # (安装 Firefox 浏览器：https://www.firefox.com/zh-CN/download/all/desktop-release/)
 
-安装 firefoxpwa(插件+运行时) 成功后，在Firefox浏览器中访问某个网站就可以看到地址栏有安装PWA的图标（不出现安装PWA图标的话就刷新一下页面）。安装PWA的时间可能需要几十秒钟，安装过程请一直保持在安装界面（不要切换到其它应用或页面，避免失败）。
+[//]: # ()
+[//]: # (给 Firefox 浏览器安装 uBlock 广告插件（离线.xpi文件）：https://github.com/gorhill/uBlock/releases)
 
-<img src="./docs/firefoxpwa-icon.png" alt="./docs/firefoxpwa-icon.png"  style="height:400px; max-width:100%;" />
+[//]: # ()
+[//]: # (安装 firefoxpwa 第三方PWA插件：https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/)
 
-安装好的PWA都在这里（包含了打开、卸载、重命名）：
+[//]: # ()
+[//]: # (安装过程中一定要看运行日志，比如还需要手动“开启firefoxpwa插件”，如下可能需要在终端运行如下命令才能开启firefoxpwa插件：)
 
-<img src="./docs/firefoxpwa-apps.png" alt="./docs/firefoxpwa-apps.png"  style="height:400px; max-width:100%;" />
+[//]: # (> sudo mkdir -p "/Library/Application Support/Mozilla/NativeMessagingHosts")
 
-在 此PWA安装 uBlock 插件，点击地址栏的插件图标，把之前下载的.xpi文件拖进去即可，这样任意的PWA应用都会有此广告插件。
+[//]: # (>)
 
-<img src="./docs/firefox-install-ext.png" alt="./docs/firefox-install-ext.png"  style="height:400px; max-width:100%;" />
+[//]: # (> sudo ln -sf "/usr/local/opt/firefoxpwa/share/firefoxpwa.json" "/Library/Application Support/Mozilla/NativeMessagingHosts/firefoxpwa.json")
 
-此 Firefox 安装 PWA 教程适同时用于Mac和Win平台。
+[//]: # ()
+[//]: # (手动安装PWA运行时，比如可能“firefoxpwa插件运行时”下载太慢，就自己在终端手动下载：)
+
+[//]: # (> firefoxpwa runtime install)
+
+[//]: # ()
+[//]: # (安装 firefoxpwa&#40;插件+运行时&#41; 成功后，在Firefox浏览器中访问某个网站就可以看到地址栏有安装PWA的图标（不出现安装PWA图标的话就刷新一下页面）。安装PWA的时间可能需要几十秒钟，安装过程请一直保持在安装界面（不要切换到其它应用或页面，避免失败）。)
+
+[//]: # ()
+[//]: # (<img src="./docs/firefoxpwa-icon.png" alt="./docs/firefoxpwa-icon.png"  style="height:400px; max-width:100%;" />)
+
+[//]: # ()
+[//]: # (安装好的PWA都在这里（包含了打开、卸载、重命名）：)
+
+[//]: # ()
+[//]: # (<img src="./docs/firefoxpwa-apps.png" alt="./docs/firefoxpwa-apps.png"  style="height:400px; max-width:100%;" />)
+
+[//]: # ()
+[//]: # (在 此PWA安装 uBlock 插件，点击地址栏的插件图标，把之前下载的.xpi文件拖进去即可，这样任意的PWA应用都会有此广告插件。)
+
+[//]: # ()
+[//]: # (<img src="./docs/firefox-install-ext.png" alt="./docs/firefox-install-ext.png"  style="height:400px; max-width:100%;" />)
+
+[//]: # ()
+[//]: # (此 Firefox 安装 PWA 教程适同时用于Mac和Win平台。)
 
 ### 关闭（延长）系统自动更新->注册表时间：
 
@@ -416,6 +441,23 @@ uBlock Origin Lite（屏蔽广告。需开启浏览器扩展开发者模式+解�
 AdBlock（屏蔽广告。需开启浏览器扩展开发者模式+解压后导入）：https://github.com/fyonecon/Macutiful/releases/download/Test/Chrome-.V3-AdBlock.-.gighmmpiobklfepjocnamgkkbiglidom.zip
 
 tabPurehome（新标签优化。需开启浏览器扩展开发者模式+解压后导入）：https://github.com/fyonecon/tabPureHome/archive/refs/heads/main.zip
+
+
+### winget 卸载win11系统软件：
+查看应用列表：
+> winget list 
+
+强制卸载软件：
+> winget uninstall --id 【软件的ID，如 MSIX\Microsoft.MicrosoftEdge.Stable_156.0.4314.50_neutral__8wekyb3d8bbwe 】 --exact --source winget --force
+> 
+> winget uninstall --id MSIX\Microsoft.MicrosoftEdge.Stable_156.0.4314.50_neutral__8wekyb3d8bbwe --exact --source winget --force
+> 
+> winget uninstall --id Microsoft.MicrosoftEdge --exact --source winget --force
+
+安装软件：
+> winget install Brave.Brave
+> 
+> winget install Google.Chrome
 
 ---
 
